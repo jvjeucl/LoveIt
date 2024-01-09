@@ -54,9 +54,7 @@
                         </span>
                     </span>
                 {{- end -}}
-                <a href="javascript:void(0);" class="menu-item theme-switch" title="{{ T "switchTheme" }}">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a>
+             
                 {{- if .Site.IsMultiLingual -}}
                 <a href="javascript:void(0);" class="menu-item language" title="{{ T "selectLanguage" }}">
                     <i class="fa fa-globe" aria-hidden="true"></i>                      
@@ -89,6 +87,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
+              
                 <a href="{{ .Site.Home.RelPermalink }}" title="{{ .Site.Title }}">
                     {{- with .Site.Params.header.title -}}
                         {{- with .logo -}}

@@ -1,6 +1,11 @@
 {{- $cdn := .Scratch.Get "cdn" | default dict -}}
 {{- $fingerprint := .Scratch.Get "fingerprint" -}}
 
+{{- /* CUSTOM STYLE 
+{{ range .Site.Params.custom_css -}}{{- end }} 
+<link rel="stylesheet" href="{{ . | static/css/embed-gist-dark-theme.css }}"> 
+*/ -}}
+
 {{- if not .Site.Params.app.noFavicon -}}
     {{- with .Site.Params.app.svgFavicon -}}
         <link rel="icon" href="{{ . }}">
